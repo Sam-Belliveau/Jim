@@ -2,6 +2,7 @@ package com.stuypulse.robot.subsystems.swerve;
 
 import com.kauailabs.navx.frc.AHRS;
 import com.stuypulse.robot.subsystems.swerve.modules.SwerveModule;
+import com.stuypulse.robot.subsystems.swerve.modules.ExampleMAXSwerveModule;
 import com.stuypulse.robot.subsystems.swerve.modules.MAX_SwerveModule;
 import com.stuypulse.robot.subsystems.swerve.modules.SacrodModule;
 import com.stuypulse.robot.subsystems.swerve.modules.SimModule;
@@ -40,10 +41,10 @@ public class SwerveDrive extends SubsystemBase {
             if (RobotBase.isReal()) {
                 if (Settings.ROBOT == Robot.JIM) {
                     instance = new SwerveDrive(
-                        new MAX_SwerveModule(FrontRight.ID, FrontRight.MODULE_OFFSET, Ports.Swerve.FrontRight.TURN, FrontRight.ABSOLUTE_OFFSET, Ports.Swerve.FrontRight.DRIVE),
-                        new MAX_SwerveModule(FrontLeft.ID, FrontLeft.MODULE_OFFSET, Ports.Swerve.FrontLeft.TURN, FrontLeft.ABSOLUTE_OFFSET, Ports.Swerve.FrontLeft.DRIVE),
-                        new MAX_SwerveModule(BackLeft.ID, BackLeft.MODULE_OFFSET, Ports.Swerve.BackLeft.TURN, BackLeft.ABSOLUTE_OFFSET, Ports.Swerve.BackLeft.DRIVE),
-                        new MAX_SwerveModule(BackRight.ID, BackRight.MODULE_OFFSET, Ports.Swerve.BackRight.TURN, BackRight.ABSOLUTE_OFFSET, Ports.Swerve.BackRight.DRIVE)
+                        new ExampleMAXSwerveModule(FrontRight.ID, FrontRight.MODULE_OFFSET, Ports.Swerve.FrontRight.TURN, FrontRight.ABSOLUTE_OFFSET, Ports.Swerve.FrontRight.DRIVE),
+                        new ExampleMAXSwerveModule(FrontLeft.ID, FrontLeft.MODULE_OFFSET, Ports.Swerve.FrontLeft.TURN, FrontLeft.ABSOLUTE_OFFSET, Ports.Swerve.FrontLeft.DRIVE),
+                        new ExampleMAXSwerveModule(BackLeft.ID, BackLeft.MODULE_OFFSET, Ports.Swerve.BackLeft.TURN, BackLeft.ABSOLUTE_OFFSET, Ports.Swerve.BackLeft.DRIVE),
+                        new ExampleMAXSwerveModule(BackRight.ID, BackRight.MODULE_OFFSET, Ports.Swerve.BackRight.TURN, BackRight.ABSOLUTE_OFFSET, Ports.Swerve.BackRight.DRIVE)
                     );
                 } else {
                     instance = new SwerveDrive(
